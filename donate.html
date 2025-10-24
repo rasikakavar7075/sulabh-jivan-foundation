@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Sulabh Jivan Foundation</title>
+    <link href="peacockgreenstyles.css" rel="stylesheet">
+    <style>
+        .container {
+            width: 60%;
+            margin: 0 auto;
+        }
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .qr-section img {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Donation Form Specific Styles --- */
+
+        /* Set label text color */
+        #donationForm label {
+            color: #2c3e50; /* A dark gray that stands out */
+            margin-bottom: 0.5rem;
+            display: block;
+            font-weight: bold;
+        }
+
+        /* Set input and textarea text color */
+        #donationForm input[type="text"],
+        #donationForm input[type="email"],
+        #donationForm input[type="tel"],
+        #donationForm input[type="number"],
+        #donationForm input[type="file"] {
+            color: #34495e; /* A slightly lighter dark gray for input text */
+            background-color: #f8fcfb; /* A very light background for inputs */
+            border: 1px solid #cce7e4; /* A light border */
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+        }
+
+        /* Placeholder text color */
+        #donationForm input::placeholder {
+            color: #90a4ae;
+        }
+
+        /* Focus state for inputs */
+        #donationForm input:focus {
+            border-color: #1abc9c;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
+        }
+
+        /* Style for the submit button - if not already defined */
+        #donationForm .submit-btn {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: 100%;
+        }
+
+        #donationForm .submit-btn:hover {
+            background: linear-gradient(135deg, #16a085, #1abc9c);
+            transform: translateY(-2px);
+        }
+
+        /* Adjust form group spacing */
+        #donationForm .form-group {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Sulabh Jivan Foundation</div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="home_link">Home</a></li>
+                <li><a href="index.html#about" data-i18n="about_link">About</a></li>
+                <li><a href="activities/girls-scholarship.html" data-i18n="activities_link">Activities</a></li>
+                <li><a href="donate.html" data-i18n="donate_link">Donate</a></li>
+                <li><a href="index.html#contact" data-i18n="contact_link">Contact</a></li>
+                <li class="language-dropdown">
+                    <a href="#" class="lang-selector" id="langSelector">English</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-lang="en">English</a></li>
+                        <li><a href="#" data-lang="hi">हिन्दी</a></li>
+                        <li><a href="#" data-lang="mr">मराठी</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Every contribution helps us create a lasting impact. Your generosity empowers communities, one life at a time.</p>
+        </div>
+    </header>
+    
+    <section id="donate-content" class="container section">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                
+                <div class="qr-section">
+                    <p class="lead">To donate, please make your payment using the QR code below and then fill out the form.</p>
+                    <img src="images/12A-80G-CSR-1-Badges-ngo.png" alt="Donation QR Code">
+                    <p class="small">Scan with any UPI app (Google Pay, PhonePe, Paytm, etc.)</p>
+                </div>
+
+                <form id="donationForm" class="contact-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="donorName">Donor Name</label>
+                        <input type="text" id="donorName" name="donorName" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number (Optional)</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="donationAmount">Donation Amount</label>
+                        <input type="number" id="donationAmount" name="donationAmount" placeholder="e.g., 500" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="receipt_screenshot">Upload Receipt Screenshot</label>
+                        <input type="file" id="receipt_screenshot" name="receipt_screenshot" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Donation</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="translations.js"></script>
+    <script src="donate.js"></script>
+</body>
+</html>

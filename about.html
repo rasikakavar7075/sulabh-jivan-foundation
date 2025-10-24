@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Sulabh Jivan Foundation</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Your custom CSS (you had peacockgreenstyles.css) -->
+  <link href="peacockgreenstyles.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif !important;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #fff;
+    }
+    /* (Add your mobile styles etc as needed) */
+    .about-hero {
+      background: linear-gradient(135deg, #008080, #00a0a0);
+      padding: 6rem 0 4rem;
+      margin: 2rem 0;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hero-grid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M 12 0 L 0 0 0 12" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23hero-grid)"/></svg>');
+      opacity: 0.4;
+    }
+    .about-hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .about-hero p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-animation-section {
+      padding: 4rem 1rem;
+      background: #ffffff;
+      text-align: center;
+    }
+    .intro-animation-section h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #008080;
+      margin-bottom: 1.5rem;
+    }
+    .intro-text {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      font-size: 1.2rem;
+      color: #334155;
+      line-height: 1.8;
+    }
+
+    .vmv-section {
+      padding: 5rem 1rem;
+      background: #f0fdf4;
+    }
+    .vmv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .vmv-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 128, 128, 0.1);
+      transition: all 0.4s ease;
+      text-align: center;
+    }
+    .vmv-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .vmv-card h3 {
+      font-size: 1.8rem;
+      color: #008080;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .vmv-card p {
+      color: #334155;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .vmv-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+    }
+
+    .values-detail-section {
+      padding: 5rem 1rem;
+      background: #ffffff;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .value-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      border: 2px solid rgba(0, 128, 128, 0.1);
+      transition: all 0.3s ease;
+    }
+    .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .value-card h4 {
+      font-size: 1.4rem;
+      color: #008080;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .value-card p {
+      color: #334155;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .value-card:hover {
+      border-color: #008080;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 128, 128, 0.15);
+    }
+
+    .rotating-impact-slider {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #f0fdf4;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 128, 128, 0.08);
+      border: 1px solid #e0f0e0;
+      overflow: hidden;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .impact-quote {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #00a0a0;
+      text-align: center;
+    }
+
+    .registration-section {
+      padding: 5rem 1rem;
+      background: #f0fdf4;
+    }
+    .registration-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+    .details-box {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 128, 128, 0.1);
+    }
+    .details-box p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      color: #334155;
+      line-height: 1.8;
+    }
+    .details-box strong {
+      color: #008080;
+      font-weight: 600;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-container">
+        <div class="logo" data-i18n="ngo_name">Sulabh Jivan Foundation</div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="home_link">Home</a></li>
+            <li><a href="about.html" data-i18n="about_link">About</a></li>
+            <li><a href="activities.html" data-i18n="activities_link">Activities</a></li>
+            <li><a href="#donate" data-i18n="donate_link">Donate</a></li>
+            <li><a href="#contact" data-i18n="contact_link">Contact</a></li>
+            <li class="language-dropdown">
+                <a href="#" class="lang-selector" id="langSelector">English</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-lang="en">English</a></li>
+                    <li><a href="#" data-lang="hi">हिन्दी</a></li>
+                    <li><a href="#" data-lang="mr">मराठी</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+        <div class="mobile-lang-menu">
+        <a href="#" data-lang="en">English</a>
+        <a href="#" data-lang="hi">हिन्दी</a>
+        <a href="#" data-lang="mr">मराठी</a>
+    </div>
+        <li><a href="index.html" data-i18n="home_link">Home</a></li>
+        <li><a href="about.html" data-i18n="about_link">About</a></li>
+        <li><a href="activities.html" data-i18n="activities_link">Activities</a></li>
+        <li><a href="#donate" data-i18n="donate_link">Donate</a></li>
+        <li><a href="#contact" data-i18n="contact_link">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="about-hero" data-aos="fade-up">
+    <h1 data-aos="fade-down" data-aos-delay="300">We Don’t Just Help, We Empower.</h1>
+    <p data-aos="fade-up" data-aos-delay="600">
+      At Sulabh Jivan Foundation, we believe true change comes from enabling communities to lead their own transformation. We are committed to building a bridge from immediate need to sustainable independence.
+    </p>
+  </section>
+
+
+  <section class="vmv-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-in">The Belief That Drives Our Work</h2>
+      <div class="vmv-grid">
+        <div class="vmv-card" data-aos="flip-left" data-aos-delay="400">
+          <div class="vmv-icon">✨</div>
+          <h3>Vision</h3>
+          <p>To create an inclusive society where every individual has access to education, healthcare, and opportunities for a dignified life.</p>
+        </div>
+        <div class="vmv-card" data-aos="flip-right" data-aos-delay="700">
+          <div class="vmv-icon">🎯</div>
+          <h3>Mission</h3>
+          <p>To empower underprivileged communities by providing quality education, healthcare, and livelihood support that leads to sustainable growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-detail-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">The Principles That Guide Every Action</h2>
+      <div class="values-grid">
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="value-icon">🤝</div>
+          <h4>Integrity</h4>
+          <p>We maintain transparency and honesty in all our operations, ensuring donors and communities can trust our commitment to meaningful change.</p>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="value-icon">❤️</div>
+          <h4>Compassion</h4>
+          <p>We approach every community member with empathy and care, understanding their unique challenges and treating them with dignity.</p>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="600">
+          <div class="value-icon">🌍</div>
+          <h4>Inclusiveness</h4>
+          <p>We ensure equal opportunities for all, regardless of background, creating programs that reach the most marginalized communities.</p>
+        </div>
+        <div class="value-card" data-aos="zoom-in" data-aos-delay="800">
+          <div class="value-icon">💪</div>
+          <h4>Empowerment</h4>
+          <p>We enable communities to become self-reliant and confident, providing tools and knowledge for lasting independence.</p>
+        </div>
+      </div>
+
+      <div class="rotating-impact-slider" data-aos="fade-left" data-aos-delay="300">
+        <p class="impact-quote">
+          <i class="fas fa-handshake" style="color: #008080; margin-right: 10px;"></i>
+          **Our commitment: Every action is a step toward self-reliance.**
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="registration-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">NGO Registration Details</h2>
+      <div class="registration-layout">
+        <div class="details-box" data-aos="fade-right" data-aos-delay="300">
+          <p><strong>CSR‑1 Certificate Registration Number:</strong> CSR00062530</p>
+          <p><strong>12A Registration Number:</strong> AAWTS6226QE20231</p>
+          <p><strong>80G Registration Number:</strong> AAWTS6226QF20231</p>
+          <p><strong>Bank:</strong> Bank of Maharashtra, Rajgurunagar, Tal Khed, Dist Pune, Pin 410505</p>
+          <p><strong>Account Number:</strong> 60335641981</p>
+          <p><strong>IFSC Code:</strong> MAHB0000287</p>
+          <p><strong>PAN Number:</strong> AAWTS6226Q</p>
+          <p><strong>Tax Exemption Status:</strong> Approved under Section 80G of the Income Tax Act</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-left">
+                  <p>&copy; 2025 Sulabh Jivan Foundation. All rights reserved.</p>
+              </div>
+              <div class="footer-right">
+                  <a href="#privacy" data-i18n="privacy_policy">Privacy Policy</a>
+                  <a href="#terms" data-i18n="terms_of_use">Terms of Use</a>
+                  <a href="#sitemap" data-i18n="sitemap">Sitemap</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- FontAwesome for icons (optional, if you use those icons) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <script  src=tranlations.js></script>
+  <script  src=script.js></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 1000,       // global duration of animations (in ms)
+        easing: 'ease-out',   // easing for animations
+        once: true,           // whether animation should happen only once
+        mirror: false         // whether animation should play when scrolling past again
+      });
+    });
+  </script>
+</body>
+</html>
