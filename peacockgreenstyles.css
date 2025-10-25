@@ -704,13 +704,13 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     background: #e9ecef; /* Fallback background */
     margin: 0 auto;
-}
+    }
     
 }
 @media (max-width: 456px) {
     .hero {
         min-height: 340vh; 
-        padding: 150px 10px; 
+        padding: 90px 10px; 
     }
     .hero h1 {
         font-size: 2.5rem; 
@@ -721,6 +721,19 @@
         font-size: 1rem; 
         padding-top: 4rem;
     }
+    .diamond-clip {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+    width: 50%;
+    height: 0;
+    padding-bottom: 43%; /* This creates a square aspect ratio */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: #e9ecef; /* Fallback background */
+    margin: 0 auto;
+    }
+    
 }
 
 /* Scroll indicator style for contrast on white BG */
@@ -2000,11 +2013,6 @@ section {
             font-weight: 600;
         }
 
-        /* Specific adjustments for the donate section's .details-box */
-        .donate-bank-details {
-            /* No background-color needed here, as .details-box already sets white */
-            /* Remove text-white from paragraphs, rely on .details-box p color */
-        }
 
         .donate-bank-details .donate-details-title {
             color: #008080; /* Match strong tag color for consistency */
