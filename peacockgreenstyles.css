@@ -693,12 +693,24 @@
         font-size: 1rem; 
         padding-top: 1rem;
     }
+    .diamond-clip {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+    width: 60%;
+    height: 0;
+    padding-bottom: 60%; /* This creates a square aspect ratio */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: #e9ecef; /* Fallback background */
+    margin: 0 auto;
+}
+    
 }
 @media (max-width: 456px) {
     .hero {
         min-height: 340vh; 
-        padding: 120px 10px; 
-        margin-bottom:100px;
+        padding: 150px 10px; 
     }
     .hero h1 {
         font-size: 2.5rem; 
@@ -742,13 +754,13 @@
 
 /* Section Styles */
 section {
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 auto;
 }
 
 .section-title {
@@ -1405,6 +1417,7 @@ section {
                     cursor: pointer;
                     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                     margin-top: 1rem;
+                    margin: auto;
                     letter-spacing: 0.5px;
         }
 
