@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="scholarship_page_title">Scholarship for Girls - Sulabh Jivan Foundation</title>
+    <!-- External stylesheet (as provided in original) -->
     <link href="../peacockgreenstyles.css" rel="stylesheet">
+    
+    <!-- Added Bootstrap Icons CDN for professional icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
-        /* Additional styles specific to activity pages */
-        .mylist{
-            padding-left: 5%;
-        }
+        /* Base styles from original, assuming --bg-card, --peacock-green etc. are in peacockgreenstyles.css */
+        
         .activity-detail {
-            padding: 90px 0 60px;
+            padding: 90px 15px 60px; /* Added horizontal padding for mobile */
+            max-width: 1100px; /* Slightly wider max-width */
+            margin: 0 auto;
         }
         
         .activity-header {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px; /* Increased margin */
         }
         
-         /* Activity Content */
-
+        /* Activity Content */
         .activity-title {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.8rem; /* Slightly larger */
+            font-weight: 700;
+            margin-bottom: 0.75rem;
             background: var(--gradient-elegant);
             -webkit-background-clip: text;
             background-clip: text;
@@ -37,18 +42,18 @@
         }
         
         .activity-content {
-            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
+            grid-template-columns: 1fr 320px; /* Adjusted sidebar width */
+            gap: 35px; /* Increased gap */
         }
         
         .activity-main {
             background: var(--bg-card);
-            padding: 30px;
+            padding: 30px 35px; /* Increased padding */
             border-radius: 15px;
             box-shadow: var(--shadow-lg);
+            overflow: hidden; /* Ensures rounded corners are respected by children */
         }
         
         .activity-sidebar {
@@ -57,16 +62,21 @@
             border-radius: 15px;
             box-shadow: var(--shadow-lg);
             height: fit-content;
+            position: sticky; /* Makes sidebar sticky on scroll */
+            top: 100px; /* Sticky offset from top (adjust based on navbar height) */
         }
-        
+
+        /* --- ENHANCED: Hero Image --- */
         .activity-hero-image {
             width: 100%;
             height: 400px;
             object-fit: cover;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Increased margin */
+            background-color: #eee; /* Placeholder bg */
         }
         
+        /* --- ENHANCED: Gallery --- */
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -77,20 +87,24 @@
         .gallery-item {
             border-radius: 8px;
             overflow: hidden;
-            height: 200px;
+            height: 220px; /* Slightly taller */
+            cursor: pointer;
+            background-color: #eee; /* Placeholder bg */
         }
         
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
         }
         
         .gallery-item:hover img {
             transform: scale(1.05);
+            filter: brightness(1.1);
         }
         
+        /* --- ENHANCED: Sidebar Info Items --- */
         .activity-info {
             margin-bottom: 25px;
         }
@@ -99,57 +113,94 @@
             display: flex;
             margin-bottom: 15px;
             align-items: center;
+            font-size: 0.95rem; /* Standardized font size */
         }
         
+        /* NEW: Styling for Bootstrap Icons */
         .info-icon {
             color: var(--peacock-green);
-            margin-right: 10px;
-            font-size: 1.2rem;
+            margin-right: 12px;
+            font-size: 1.3rem; /* Larger icon */
+            width: 25px; /* Fixed width for alignment */
+            text-align: center;
+            flex-shrink: 0;
         }
         
         .other-activities {
             margin-top: 30px;
         }
+
+        .other-activities h3 {
+            margin-bottom: 20px; /* Added space below heading */
+        }
         
         .activity-list {
             list-style: none;
+            padding-left: 0; /* Removed default padding */
         }
         
         .activity-list li {
             margin-bottom: 12px;
             padding-bottom: 12px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.07)); /* Use variable if available */
+        }
+        
+        .activity-list li:last-child {
+            border-bottom: none; /* Remove border from last item */
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
         
         .activity-list a {
-            color: var(--peacock-green);
+            color: var(--peacock-green); /* Use variable */
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
+            font-size: 0.95rem;
         }
         
         .activity-list a:hover {
-            color: var(--peacock-green-dark);
+            color: var(--peacock-green-dark); /* Use variable */
             transform: translateX(5px);
         }
-        
+
+        /* NEW: Styling for Bootstrap Icons in list */
         .list-icon {
-            margin-right: 18px;
+            color: var(--peacock-green);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 25px; /* Fixed width for alignment */
+            text-align: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-list a:hover .list-icon {
+            transform: scale(1.1) rotate(-5deg); /* Add subtle hover effect to icon */
         }
         
+        /* --- ENHANCED: Activity Navigation --- */
         .activity-navigation {
             display: flex;
             justify-content: space-between;
             margin-top: 50px;
             padding-top: 30px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
         }
         
+        /* NEW: Classes to handle single buttons */
+        .activity-navigation.single-next {
+            justify-content: flex-end;
+        }
+        .activity-navigation.single-prev {
+            justify-content: flex-start;
+        }
+
         .nav-button {
-            padding: 12px 25px ; 
-            margin-left: 20%;
+            padding: 12px 25px; 
+            /* REMOVED: 'margin-left: 20%;' - handling with flexbox now */
             background: var(--gradient-primary);
             color: white;
             text-decoration: none;
@@ -158,11 +209,12 @@
             display: inline-flex;
             align-items: center;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-md); /* Use variable */
         }
         
         .nav-button:hover {
             transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-lg); /* Use variable */
         }
         
         .nav-button.prev::before {
@@ -175,26 +227,66 @@
             margin-left: 8px;
         }
         
-        @media (max-width: 700px) {
+        /* --- ENHANCED: mylist styling --- */
+        .mylist {
+            padding-left: 5px; /* Reduced default padding */
+        }
+        .mylist ul {
+            list-style: none; /* Remove default bullets */
+            padding-left: 10px; /* Indent the list */
+        }
+        .mylist li {
+            position: relative;
+            padding-left: 30px; /* Make space for custom icon */
+            margin-bottom: 12px; /* Space out list items */
+            color: var(--text-primary); /* Assuming this var exists */
+            line-height: 1.6;
+        }
+        .mylist li::before {
+            /* Using Bootstrap Icon as checkmark */
+            content: '\F26E'; /* Bootstrap icon code for check-circle-fill */
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--peacock-green); /* Use theme color */
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* --- Responsive Styles --- */
+        @media (max-width: 900px) { /* Changed breakpoint */
             .activity-content {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Stack main and sidebar */
             }
-            
+            .activity-sidebar {
+                position: static; /* Remove sticky positioning on mobile */
+                top: auto;
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 700px) {
             .gallery {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Stack gallery items */
             }
             
             .activity-hero-image {
                 height: 250px;
             }
-            .gallery-item img {
+            .gallery-item { /* Adjusted gallery item height */
                 height: 250px;
-           }
+            }
         }
         
         @media (max-width: 600px) {
             .activity-title {
-                font-size: 2rem;
+                font-size: 2.2rem; /* Adjusted font size */
+                line-height: 1.3;
+            }
+
+            .activity-main {
+                padding: 25px 20px; /* Reduce padding on mobile */
             }
             
             .activity-navigation {
@@ -204,11 +296,19 @@
             
             .nav-button {
                 justify-content: center;
+                width: 100%; /* Make buttons full-width */
+            }
+
+            /* Handle single button alignment in stacked view */
+            .activity-navigation.single-next,
+            .activity-navigation.single-prev {
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navbar (from original) -->
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo" data-i18n="ngo_name">Sulabh Jivan Foundation</div>
@@ -235,6 +335,7 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu (from original) -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-nav-links">
             <div class="mobile-lang-menu">
@@ -242,15 +343,16 @@
                 <a href="#" data-lang="hi" data-i18n="lang_hindi">हिन्दी</a>
                 <a href="#" data-lang="mr" data-i18n="lang_marathi">मराठी</a>
             </div>
-            <li><a href="index.html#home" data-i18n="home_link">Home</a></li>
-            <li><a href="index.html#about" data-i18n="about_link">About</a></li>
-            <li><a href="activities.html" data-i18n="activities_link">Activities</a></li>
-            <li><a href="donate.html" data-i18n="donate_link">Donate</a></li>
-            <li><a href="index.html#contact" data-i18n="contact_link">Contact</a></li>
+            <li><a href="../index.html#home" data-i18n="home_link">Home</a></li>
+            <li><a href="../index.html#about" data-i18n="about_link">About</a></li>
+            <li><a href="../activities.html" data-i18n="activities_link">Activities</a></li>
+            <li><a href="../index.html#donate" data-i18n="donate_link">Donate</a></li>
+            <li><a href="../index.html#contact" data-i18n="contact_link">Contact</a></li>
         </ul>
     </div>
 
-    <main class="activity-detail container">
+    <!-- Main Activity Detail -->
+    <main class="activity-detail">
         <div class="activity-header">
             <h1 class="activity-title" data-i18n="scholarship_title"> A Scholarship of Hope: Giving Dreams a Second Chance (2024)</h1>
             <div class="activity-meta" data-i18n="scholarship_meta">Education Program | 2025 </div>
@@ -258,41 +360,50 @@
         
         <div class="activity-content">
             <div class="activity-main">
-                <img src="scholarship-hero.png" alt="Scholarship distribution" class="activity-hero-image">
+                <!-- ENHANCED: Online hero image -->
+                <img src="scholarship-hero.png" 
+                     alt="Students studying together" 
+                     class="activity-hero-image"
+                     onerror="this.src='https://placehold.co/1200x400/008080/FFFFFF?text=Scholarship+Program'">
                 
                 <h2 data-i18n="about_initiative_heading">About the Initiative</h2>
                 <p data-i18n="about_initiative_p1">The sudden loss of a parent or a family's financial crisis can abruptly end a girl's educational journey. For 20 girls from single-parent, widowed, or orphaned families, this was a very real fear.</p>
                 <p data-i18n="about_initiative_p2">Our scholarship program was designed to be a lifeline. By providing Rs. 1000 to cover school fees, uniforms, and books, we sent a powerful message: their dreams are worth fighting for. We removed the financial hurdle and gave them the confidence to stay in school, empowering them to build a brighter future for themselves and their families.</p>
                 <br>
                 <p data-i18n="about_initiative_p3">Also in this year, we successfully connected 7 families with the Savitribai Phule Child Care Scheme by Government of Maharashtra. We provided end-to-end support, from information and documentation to liaising with implementing partners, ensuring they received the government assistance they were entitled to.</p>
-                <p data-i18n="about_initiative_p4">Since its inception, the program has shown remarkable results:</p>
-                <br>
+                
                 <h2 data-i18n="program_impact_heading">Program Impact</h2>
-                <p data-i18n="program_impact_p1">Since its inception, the program has shown remarkable results:</p>
+                <!-- <p data-i18n="program_impact_p1">Since its inception, the program has shown remarkable results:</p> -->
+                
+                <!-- ENHANCED: mylist with custom icons -->
                 <div class="mylist">
-                <ul>
-                    <li data-i18n="impact_li1">Recipients showed improved academic performance</li>
-                    <li data-i18n="impact_li2">School attendance increased among beneficiaries</li>
-                    <li data-i18n="impact_li3">Created a supportive community for girls with similar backgrounds</li>
-                </ul>
-                <br>
+                    <ul>
+                        <li data-i18n="impact_li1">Recipients showed improved academic performance</li>
+                        <li data-i18n="impact_li2">School attendance increased among beneficiaries</li>
+                        <li data-i18n="impact_li3">Created a supportive community for girls with similar backgrounds</li>
+                    </ul>
                 </div>
+                <br>
                 
-                
-                <h2 data-i18n="with_students_heading"> With Students </h2>
+                <h2 data-i18n="with_students_heading">With Our Students</h2>
                 <div class="gallery">
+                    <!-- ENHANCED: Online gallery images -->
                     <div class="gallery-item">
-                        <img src="sjf-scholarship1.jpg" alt="Sulabh Jivan Foundation Scholarship distribution">
+                        <img src="sjf-scholarship1.jpg" 
+                             alt="Student receiving scholarship certificate"
+                             onerror="this.src='https://placehold.co/600x440/008080/FFFFFF?text=Gallery+Image+1'">
                     </div>
-
                     <div class="gallery-item">
-                        <img src="sjf-scholarship2.jpg" alt="Sulabh Jivan Foundation Scholarship distribution">
+                        <img src="sjf-scholarship2.jpg" 
+                             alt="Group of happy students in a classroom"
+                             onerror="this.src='https://placehold.co/600x440/008080/FFFFFF?text=Gallery+Image+2'">
                     </div>
-
                 </div>
                 
                 <h2 data-i18n="future_goals_heading">Future Goals</h2>
                 <p data-i18n="future_goals_p1">We aim to expand this program to reach more girls by 2025. Our future plans include:</p>
+                
+                <!-- ENHANCED: mylist for future goals -->
                 <div class="mylist">
                     <ul>
                         <li data-i18n="future_li1">Establishing a mentorship program pairing recipients with professionals</li>
@@ -300,55 +411,86 @@
                         <li data-i18n="future_li3">Creating career guidance workshops for higher education opportunities</li>
                     </ul>
                 </div>
-                
             </div>
             
             <div class="activity-sidebar">
                 <div class="activity-info">
                     <h3 data-i18n="activity_details_heading">Activity Details</h3>
+                    <!-- ENHANCED: Replaced emojis with Bootstrap Icons -->
                     <div class="info-item">
-                        <span class="info-icon">📍</span>
+                        <i class="bi bi-geo-alt-fill info-icon"></i>
                         <span data-i18n="activity_details_location">Pune District, Maharashtra</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-icon">👧</span>
+                        <i class="bi bi-people-fill info-icon"></i>
                         <span data-i18n="activity_details_beneficiaries">20 Beneficiaries</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-icon">📅</span>
+                        <i class="bi bi-calendar-event-fill info-icon"></i>
                         <span data-i18n="activity_details_date">Ongoing since 2024</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-icon">🏆</span>
+                        <i class="bi bi-bookmark-star-fill info-icon"></i>
                         <span data-i18n="activity_details_category">Education Category</span>
                     </div>
                 </div>
                 
                 <div class="other-activities">
                     <h3 data-i18n="other_activities_heading">Other Activities</h3>
+                    <!-- ENHANCED: Replaced emojis with Bootstrap Icons and fixed typos -->
                     <ul class="activity-list">
                         <li>
-                            <a href="bicycle-distribution.html" data-i18n="other_activity_bicycle">
-                                <span class="list-icon">🚴</span>
+                            <a href="bicycle-distribution.html" data-i18n="other_activity1_bicycle">
+                                <i class="bi bi-bicycle list-icon"></i>
                                 Bicycle Distribution Program
                             </a>
                         </li>
                         <li>
-                            <a href="activity-educational-materials.html" data-i18n="other_activity_educational">
-                                <span class="list-icon">📚</span>
+                            <a href="educational-material.html" data-i18n="other_activity2_educational">
+                                <i class="bi bi-book-half list-icon"></i>
                                 Educational Material Drive
                             </a>
                         </li>
                         <li>
-                            <a href="activity-health-hygiene.html" data-i18n="other_activity_health">
-                                <span class="list-icon">🩺</span>
+                            <a href="health-hygiene.html" data-i18n="other_activity3_health">
+                                <i class="bi bi-heart-pulse-fill list-icon"></i>
                                 Health & Hygiene Awareness
                             </a>
                         </li>
                         <li>
-                            <a href="activity-environment.html" data-i18n="other_activity_environment">
-                                <span class="list-icon">🌱</span>
-                                Environmental Conservation
+                            <a href="girls-scholarship.html" data-i18n="other_activity4_environment">
+                                <i class="bi bi-mortarboard-fill list-icon"></i>
+                                Girls Scholarship
+                            </a>
+                        </li>
+                        <li>
+                            <a href="anaemia-awareness.html" data-i18n="other_activity5_environment">
+                                <i class="bi bi-bandaid-fill list-icon"></i> <!-- More relevant icon -->
+                                Anaemia Awareness
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gender-heath-law.html" data-i18n="other_activity6_environment">
+                                <i class="bi bi-balance-scale list-icon"></i> <!-- More relevant icon -->
+                                Gender and Law Awareness 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="financial-literacy.html" data-i18n="other_activity7_environment">
+                                <i class="bi bi-cash-coin list-icon"></i> <!-- More relevant icon -->
+                                Financial Literacy Training
+                            </a>
+                        </li>
+                        <li>
+                            <a href="youth-clubs.html" data-i18n="other_activity8_environment">
+                                <i class="bi bi-person-arms-up list-icon"></i> <!-- More relevant icon -->
+                                Youth Clubs 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nutri-kitchen.html" data-i18n="other_activity9_environment">
+                                <i class="bi bi-egg-fried list-icon"></i> <!-- More relevant icon -->
+                                Nutri-Kitchen
                             </a>
                         </li>
                     </ul>
@@ -356,11 +498,18 @@
             </div>
         </div>
         
-        <div class="activity-navigation">
+        <!-- ENHANCED: Added 'single-next' class for proper alignment of one button -->
+        <div class="activity-navigation single-next">
+            <!-- 
+                TEMPLATE NOTE: For other pages, add the 'prev' button like this:
+                <a href="previous-activity.html" class="nav-button prev" data-i18n="prev_activity_button">Previous Activity</a>
+                ...and REMOVE the 'single-next' class from the div above.
+            -->
             <a href="bicycle-distribution.html" class="nav-button next" data-i18n="next_activity_button">Next Activity</a>
         </div>
     </main>
 
+    <!-- Footer (from original) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -376,15 +525,20 @@
         </div>
     </footer>
 
+    <!-- Scripts (from original) -->
     <script src="../translations.js"></script>
     <script src="../script.js"></script>
+    
+    <!-- Gallery Lightbox Script (from original, slightly modified for robustness) -->
     <script>
-        // Simple image gallery functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const galleryImages = document.querySelectorAll('.gallery-item img');
+            const galleryItems = document.querySelectorAll('.gallery-item');
             
-            galleryImages.forEach(img => {
-                img.addEventListener('click', function() {
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (!img) return; // Don't run if no image found
+
                     // Create overlay for image viewing
                     const overlay = document.createElement('div');
                     overlay.style.position = 'fixed';
@@ -398,21 +552,36 @@
                     overlay.style.alignItems = 'center';
                     overlay.style.zIndex = '1000';
                     overlay.style.cursor = 'pointer';
+                    overlay.style.opacity = '0'; // For fade-in
+                    overlay.style.transition = 'opacity 0.3s ease';
                     
                     // Create enlarged image
                     const enlargedImg = document.createElement('img');
-                    enlargedImg.src = this.src;
+                    enlargedImg.src = img.src;
+                    enlargedImg.alt = img.alt; // Copy alt text
                     enlargedImg.style.maxWidth = '90%';
                     enlargedImg.style.maxHeight = '90%';
                     enlargedImg.style.objectFit = 'contain';
+                    enlargedImg.style.borderRadius = '8px';
                     
                     // Add to overlay and to document
                     overlay.appendChild(enlargedImg);
                     document.body.appendChild(overlay);
+
+                    // Trigger fade-in
+                    setTimeout(() => {
+                        overlay.style.opacity = '1';
+                    }, 10);
                     
                     // Close overlay when clicked
                     overlay.addEventListener('click', function() {
-                        document.body.removeChild(overlay);
+                        overlay.style.opacity = '0';
+                        // Remove after fade-out transition
+                        setTimeout(() => {
+                            if (document.body.contains(overlay)) {
+                                document.body.removeChild(overlay);
+                            }
+                        }, 300);
                     });
                 });
             });
