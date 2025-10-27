@@ -2411,3 +2411,9 @@ section {
         /* Add space below it */
     }
 }
+
+@media (max-width: 768px) {
+.donate h2{
+    font-size: 2rem;
+}
+}

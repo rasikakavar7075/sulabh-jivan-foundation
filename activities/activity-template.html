@@ -308,47 +308,50 @@
     </style>
 </head>
 <body>
-    <!-- Navbar (from original) -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo" data-i18n="ngo_name">Sulabh Jivan Foundation</div>
-            <ul class="nav-links">
-                <li><a href="../index.html#home" data-i18n="home_link">Home</a></li>
-                <li><a href="../index.html#about" data-i18n="about_link">About</a></li>
-                <li><a href="../activities.html" data-i18n="activities_link">Activities</a></li>
-                <li><a href="../index.html#donate" data-i18n="donate_link">Donate</a></li>
-                <li><a href="../index.html#contact" data-i18n="contact_link">Contact</a></li>
-                <li class="language-dropdown">
-                    <a href="#" class="lang-selector" id="langSelector" data-i18n="lang_english">English</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" data-lang="en" data-i18n="lang_english">English</a></li>
-                        <li><a href="#" data-lang="hi" data-i18n="lang_hindi">हिन्दी</a></li>
-                        <li><a href="#" data-lang="mr" data-i18n="lang_marathi">मराठी</a></li>
-                    </ul>
-                </li>
+   <nav id="navbar" class="scrolled">
+      <div class="nav-container">
+        <div class="logo" data-i18n="ngo_name">Sulabh Jivan Foundation</div>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="home_link">Home</a></li>
+          <li><a href="about.html" data-i18n="about_link">About</a></li>
+          <li>
+            <a href="activities.html" data-i18n="activities_link">Our Work</a>
+          </li>
+          <li><a href="#donate" data-i18n="donate_link">Donate</a></li>
+          <li><a href="#contact" data-i18n="contact_link">Contact</a></li>
+          <li class="language-dropdown">
+            <a href="#" class="lang-selector" id="langSelector">English</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-lang="en">English</a></li>
+              <li><a href="#" data-lang="hi">हिन्दी</a></li>
+              <li><a href="#" data-lang="mr">मराठी</a></li>
             </ul>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-            </div>
+          </li>
+        </ul>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
+          <div class="hamburger"></div>
         </div>
+      </div>
     </nav>
 
-    <!-- Mobile Menu (from original) -->
     <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-links">
-            <div class="mobile-lang-menu">
-                <a href="#" data-lang="en" data-i18n="lang_english">English</a>
-                <a href="#" data-lang="hi" data-i18n="lang_hindi">हिन्दी</a>
-                <a href="#" data-lang="mr" data-i18n="lang_marathi">मराठी</a>
-            </div>
-            <li><a href="../index.html#home" data-i18n="home_link">Home</a></li>
-            <li><a href="../index.html#about" data-i18n="about_link">About</a></li>
-            <li><a href="../activities.html" data-i18n="activities_link">Activities</a></li>
-            <li><a href="../index.html#donate" data-i18n="donate_link">Donate</a></li>
-            <li><a href="../index.html#contact" data-i18n="contact_link">Contact</a></li>
-        </ul>
+      <ul class="mobile-nav-links">
+        <div class="mobile-lang-menu">
+          <a href="#" data-lang="en">English</a>
+          <a href="#" data-lang="hi">हिन्दी</a>
+          <a href="#" data-lang="mr">मराठी</a>
+        </div>
+        <hr>
+        <li><a href="index.html" data-i18n="home_link">Home</a></li>
+        <li><a href="about.html" data-i18n="about_link">About</a></li>
+        <li>
+          <a href="activities.html" data-i18n="activities_link">Our Work</a>
+        </li>
+        <li><a href="#donate" data-i18n="donate_link">Donate</a></li>
+        <li><a href="#contact" data-i18n="contact_link">Contact</a></li>
+      </ul>
     </div>
 
     <!-- Main Activity Detail -->
@@ -361,7 +364,7 @@
         <div class="activity-content">
             <div class="activity-main">
                 <!-- ENHANCED: Online hero image -->
-                <img src="https://images.unsplash.com/photo-1523240795610-a78c06a3be05?auto=format&fit=crop&w=1200&q=80" 
+                <img src="scholarship-hero.png" 
                      alt="Students studying together" 
                      class="activity-hero-image"
                      onerror="this.src='https://placehold.co/1200x400/008080/FFFFFF?text=Scholarship+Program'">
@@ -389,12 +392,12 @@
                 <div class="gallery">
                     <!-- ENHANCED: Online gallery images -->
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80" 
+                        <img src="sjf-scholarship1.jpg" 
                              alt="Student receiving scholarship certificate"
                              onerror="this.src='https://placehold.co/600x440/008080/FFFFFF?text=Gallery+Image+1'">
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" 
+                        <img src="sjf-scholarship2.jpg" 
                              alt="Group of happy students in a classroom"
                              onerror="this.src='https://placehold.co/600x440/008080/FFFFFF?text=Gallery+Image+2'">
                     </div>
@@ -446,7 +449,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="educational-materials.html" data-i18n="other_activity2_educational">
+                            <a href="educational-material.html" data-i18n="other_activity2_educational">
                                 <i class="bi bi-book-half list-icon"></i>
                                 Educational Material Drive
                             </a>
