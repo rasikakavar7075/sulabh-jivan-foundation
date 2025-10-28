@@ -516,7 +516,7 @@ nav.scrolled {
     animation: fadeInUp 1s ease 0.4s forwards;
     line-height: 1.2;
     /* Tightened line height */
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
 }
 
 .hero .subtitle {
@@ -1681,7 +1681,7 @@ section {
     }
 
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
