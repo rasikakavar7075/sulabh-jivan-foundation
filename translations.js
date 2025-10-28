@@ -5,7 +5,7 @@ const translations = {
         // Navigation
         "home_link": "Home",
         "about_link": "About",
-        "activities_link": "Activities",
+        "activities_link": "Our Work",
         "donate_link": "Donate",
         "contact_link": "Contact",
 
