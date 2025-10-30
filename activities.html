@@ -305,7 +305,7 @@
     <section class="activities-main">
         <div class="container">
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="education">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_1_title">Scholarship for Girls with Single Parents</h4>
@@ -313,7 +313,7 @@
                         <a href="activities/girls-scholarship.html" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="education">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_2_title">Distribution of Bicycles to Girls</h4>
@@ -321,7 +321,7 @@
                         <a href="activities/bicycle-distribution.html" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="education">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_3_title">Educational Material Distribution Program</h4>
@@ -329,7 +329,7 @@
                         <a href="activities/educational-material.html" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="health women">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_4_title">Gender, Health and Legal Awareness Programs for Adolescent Girls</h4>
@@ -337,7 +337,7 @@
                         <a href="activities/gender-heath-law.html" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="environment women">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_5_title">Environmentally Friendly Cloth Bag Initiative</h4>
@@ -345,15 +345,15 @@
                         <a href="activities/ecofriendly-cloth-bag.html" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="health women">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_6_title">Awareness Program on Menstruation Health</h4>
                         <p data-i18n="activity_6_desc">A public awareness program on menstruation was implemented for 300 rural girls and women in Khed taluka through video conferencing.</p>
-                        <a href="#" data-i18n="view_details">View Details</a>
+                        <a href="activities/health-hygiene.html" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="health women">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_7_title">Awareness Program on Anaemia</h4>
@@ -361,7 +361,7 @@
                         <a href="#" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="education youth">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_8_title">Financial Literacy Training for College Students</h4>
@@ -369,7 +369,7 @@
                         <a href="#" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="youth environment">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_9_title">Establishing Youth Clubs for Rural Youth</h4>
@@ -377,7 +377,7 @@
                         <a href="#" data-i18n="view_details">View Details</a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="health women">
                     <div class="portfolio-image"></div>
                     <div class="portfolio-content">
                         <h4 data-i18n="activity_10_title">Organic Garden / Nutri Kitchen Garden Program</h4>
@@ -406,5 +406,36 @@
     
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Get all the activity items
+        const allActivities = document.querySelectorAll(".portfolio-item");
+
+        // 2. Get the filter category from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryFilter = urlParams.get("category");
+
+        // 3. If a category is present in the URL, filter the items
+        if (categoryFilter) {
+          allActivities.forEach(function (item) {
+            // Get the item's categories (e.g., "health women")
+            const itemCategories = item.dataset.category;
+
+            // Check if the item's categories include the filter
+            if (itemCategories && itemCategories.includes(categoryFilter)) {
+              // If it matches, show it (it's visible by default)
+              item.style.display = "block"; 
+            } else {
+              // If it does not match, hide it
+              item.style.display = "none";
+            }
+          });
+        }
+        // 4. If no category is in the URL, all items will show by default.
+      });
+    </script>
 </body>
 </html>

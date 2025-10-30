@@ -158,13 +158,17 @@
             </p>
 
             <div class="skills">
+              <span class="skill-tag" data-i18n="skill_2">Education</span>
+              <span class="skill-tag" data-i18n="skill_3">Women Empowerment</span>
+              <span class="skill-tag" data-i18n="skill_4">Health & Nutrition</span>
+              <span class="skill-tag" data-i18n="skill_5">Youth</span>
               <a
                 href="about.html"
                 class="view-more-button"
-                data-i18n="view_more"
-                >View More About Us</a
-              >
+                data-i18n="view_more">
+                View More About Us</a>
             </div>
+            
           </div>
         </div>
       </div>
@@ -186,6 +190,7 @@
               Explore Our Core Programs
             </h3>
 
+            <a href="activities.html?category=education" style="text-decoration: none;">
             <div
               class="card cause-card shadow-sm mb-4"
               data-aos="fade-right"
@@ -193,7 +198,7 @@
             >
               <div class="card-body">
                 <div class="d-flex align-items-start">
-                  <i class="fas fa-graduation-cap fa-3x text-primary me-3"></i>
+                  <i class="fas fa-graduation-cap fa-2x text-primary me-3"></i>
                   <div>
                     <h4 class="card-title fw-bold">1. Education</h4>
                     <p class="card-text text-muted">
@@ -204,7 +209,29 @@
                 </div>
               </div>
             </div>
-
+            </a> 
+            <a href="activities.html?category=women" style="text-decoration: none;">
+            <div
+              class="card cause-card shadow-sm mb-4"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
+              <div class="card-body">
+                <div class="d-flex align-items-start">
+                  <!-- New icon and color -->
+                  <i class="fas fa-female fa-3x text-warning me-3"></i>
+                  <div>
+                    <h4 class="card-title fw-bold">2. Women Empowerment</h4>
+                    <p class="card-text text-muted">
+                      Providing health, legal, and entrepreneurial support to
+                      foster women's independence and self-reliance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            <a href="activities.html?category=health" style="text-decoration: none;">
             <div
               class="card cause-card shadow-sm mb-4"
               data-aos="fade-right"
@@ -212,9 +239,9 @@
             >
               <div class="card-body">
                 <div class="d-flex align-items-start">
-                  <i class="fas fa-heartbeat fa-3x text-danger me-3"></i>
+                  <i class="fas fa-heartbeat fa-2x text-danger me-3"></i>
                   <div>
-                    <h4 class="card-title fw-bold">2. Health and Nutrition</h4>
+                    <h4 class="card-title fw-bold">3. Health and Nutrition</h4>
                     <p class="card-text text-muted">
                       Funding health awareness sessions, tackling malnutrition,
                       and supporting programs like 'Nutri-Kitchen' for community
@@ -224,7 +251,9 @@
                 </div>
               </div>
             </div>
+            </a>
 
+            <a href="activities.html?category=environment" style="text-decoration: none;">
             <div
               class="card cause-card shadow-sm mb-4"
               data-aos="fade-right"
@@ -232,10 +261,10 @@
             >
               <div class="card-body">
                 <div class="d-flex align-items-start">
-                  <i class="fas fa-leaf fa-3x text-success me-3"></i>
+                  <i class="fas fa-leaf fa-2x text-success me-3"></i>
                   <div>
                     <h4 class="card-title fw-bold">
-                      3. Environment and New Jobs
+                      4. Environment and New Jobs
                     </h4>
                     <p class="card-text text-muted">
                       Fostering sustainable practices, promoting eco-friendly
@@ -246,6 +275,7 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
 
           <div class="col-lg-6">
@@ -549,6 +579,7 @@
         } else {
           console.error("No slider images found!");
         }
+     
       });
     </script>
     <script src="translations.js"></script>
