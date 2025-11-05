@@ -11,7 +11,7 @@ const translations = {
 
         // Hero Section
         "hero_subtitle": "Working for a Better Tomorrow",
-        "hero_title": "Empowering Communities for a Sustainable Future",
+        "hero_title": "Empowering people to build brighter future",
         "hero_description": "Committed to creating a positive impact through education, health, and economic empowerment for marginalized communities.",
         "explore_work": "Explore Our Work",
 
@@ -143,15 +143,15 @@ const translations = {
         // Navigation
         "home_link": "मुख्यपृष्ठ",
         "about_link": "आमच्याबद्दल", // Improved: 'आमच्याविषयी' is also fine, but 'आमच्याबद्दल' is common.
-        "activities_link": "उपक्रम", // Improved: 'उपक्रम' (Initiatives/Projects) is often more fitting than 'क्रियाकलाप' (Activities)
+        "activities_link": "उपक्रम", 
         "donate_link": "देणगी द्या", // Improved: 'देणगी द्या' (Give Donation) is more precise than 'दान करा' (Do Charity)
         "contact_link": "संपर्क साधा", // Improved: 'संपर्क साधा' (Contact Us) is better than 'संपर्क'
 
         // Hero Section
-        "hero_subtitle": "उज्ज्वल भविष्यासाठी कार्यरत", // Improved: Used 'कार्यरत' (working)
-        "hero_title": "शाश्वत भविष्यासाठी समुदायांचे सक्षमीकरण", // Improved: Used 'शाश्वत' (sustainable) and 'सक्षमीकरण' (empowerment)
+        "hero_subtitle": "सुंदर उद्याच्या दिशेने",
+        "hero_title": "उज्वल भविष्यासाठी मनुष्याच्या सामर्थ्याला जागृत करूया", // Improved: Used 'शाश्वत' (sustainable) and 'सक्षमीकरण' (empowerment)
         "hero_description": "शिक्षण, आरोग्य आणि आर्थिक सक्षमीकरणाच्या माध्यमातून वंचित समुदायांवर सकारात्मक प्रभाव पाडण्यासाठी आम्ही वचनबद्ध आहोत.", // Improved: Used 'माध्यमातून' (through) and 'पाडण्यासाठी' (to make)
-        "explore_work": "आमचे कार्य पहा", // Improved: Used 'पहा' (see)
+        "explore_work": "आमचे कार्य पहा", 
 
         // About Section
         "about_title": "सुलभ जीवन फाउंडेशन बद्दल",

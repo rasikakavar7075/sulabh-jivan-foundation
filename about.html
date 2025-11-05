@@ -23,7 +23,7 @@
     /* (Add your mobile styles etc as needed) */
     .about-hero {
       background: linear-gradient(135deg, #008080, #00a0a0);
-      padding: 6rem 0 4rem;
+      padding: 6rem 0 2rem 0;
       text-align: center;
       color: white;
       position: relative;
@@ -39,7 +39,6 @@
     .about-hero h1 {
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 1rem;
       position: relative;
       z-index: 2;
     }
@@ -51,6 +50,64 @@
       position: relative;
       z-index: 2;
     }
+    .image-banner-section {
+      width: 95%;
+      height: 870px;
+      background-image: url('images/Sulabh-Jivan-Foundation-A-Commitment-to-Community.jpg');   
+      background-position: center;
+      background-repeat: no-repeat;
+      margin:auto;
+    }
+    
+    @media (max-width: 768px) {
+      .image-banner-section {
+        background-image: url('images/Our-Story-Our-Purpose-tab.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 1296px;
+        width: 100%;
+        padding-left: 15px;
+      }
+      .about-hero.about-hero h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+    .about-hero p {
+      font-size: 1rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 456px) {
+      .image-banner-section {
+        background-image: url('images/Our-Story-Our-Purpose.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 1296px;
+        width: 100%;
+        padding-left: 15px;
+      }
+      .about-hero.about-hero h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+    .about-hero p {
+      font-size: 1rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    }
+    }
 
     .intro-animation-section {
       padding: 4rem 1rem;
@@ -61,7 +118,6 @@
       font-size: 2.8rem;
       font-weight: 700;
       color: #008080;
-      margin-bottom: 1.5rem;
     }
     .intro-text {
       max-width: 800px;
@@ -72,7 +128,7 @@
     }
 
     .vmv-section {
-      padding: 5rem 1rem;
+      padding: 1rem 1rem;
       background: #f0fdf4;
     }
     .vmv-grid {
@@ -91,7 +147,9 @@
     }
     .vmv-icon {
       font-size: 3rem;
-      margin-bottom: 1.5rem;
+    }
+    .vmv-section h2{
+      font-size: 2.5rem;
     }
     .vmv-card h3 {
       font-size: 1.8rem;
@@ -108,6 +166,73 @@
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
     }
+    /* Custom background for the first vmv-card (Vision) */
+    .vmv-grid .vmv-card:first-child {
+      background: url('images/vision.png') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      position: relative;
+    }
+
+    .vmv-grid .vmv-card:first-child::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(116, 163, 137, 0.486); /* Or whatever transparency you chose */
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .vmv-grid .vmv-card:first-child h3,
+    .vmv-grid .vmv-card:first-child p,
+    .vmv-grid .vmv-card:first-child .vmv-icon {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .vmv-grid .vmv-card:first-child:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 128, 128, 0.3);
+    }
+
+    /* --- NEW CSS FOR MISSION CARD (SECOND CHILD) --- */
+    .vmv-grid .vmv-card:nth-child(2) { /* Target the second card */
+      background: url('images/mission.png') no-repeat center center; /* Same image */
+      background-size: cover;
+      color: #fff; /* White text for contrast */
+      position: relative;
+    }
+
+    .vmv-grid .vmv-card:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(116, 163, 137, 0.486);
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .vmv-grid .vmv-card:nth-child(2) h3,
+    .vmv-grid .vmv-card:nth-child(2) p,
+    .vmv-grid .vmv-card:nth-child(2) .vmv-icon {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .vmv-grid .vmv-card:nth-child(2):hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 128, 128, 0.3);
+    }
+    
+
 
     .values-detail-section {
       padding: 5rem 1rem;
@@ -194,7 +319,7 @@
       color: #008080;
       font-weight: 600;
     }
-
+     
     
   </style>
 </head>
@@ -246,24 +371,25 @@
 
   <section class="about-hero" data-aos="fade-up">
     <h1 data-aos="fade-down" data-aos-delay="300">We transform help into empowerment</h1>
+    <p data-aos="fade-down" data-aos-delay="300">Working for Rural Women, Youth and Child development<p>
   </section>
-
-
+  <section class="image-banner-section" data-aos="zoom-in-up"></section>
   <section class="vmv-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-in">The Belief That Drives Our Work</h2>
       <div class="vmv-grid">
         <div class="vmv-card" data-aos="flip-left" data-aos-delay="400">
-          <div class="vmv-icon">✨</div>
+          <div class="vmv-icon">☆</div>
           <h3>Vision</h3>
           <p>To create an inclusive society where every individual has access to education, healthcare, and opportunities for a dignified life.</p>
         </div>
         <div class="vmv-card" data-aos="flip-right" data-aos-delay="700">
-          <div class="vmv-icon">🎯</div>
+          <div class="vmv-icon">⨀</div>
           <h3>Mission</h3>
-          <p>To empower underprivileged communities by providing quality education, healthcare, and livelihood support that leads to sustainable growth.</p>
+          <p>To empower underprivileged communities by providing education, healthcare, and livelihood support that leads to sustainable growth.</p>
         </div>
       </div>
+      <img src="images/Dignity-opportunity-self-reliance-hd.png" style="width: 100%; height: 80%; padding-top: 5%;" data-aos="fade-up">
     </div>
   </section>
 
@@ -287,7 +413,7 @@
           <p>We ensure equal opportunities for all, regardless of background, creating programs that reach the most marginalized communities.</p>
         </div>
         <div class="value-card" data-aos="zoom-in" data-aos-delay="800">
-          <div class="value-icon">💪</div>
+          <div class="value-icon">💡</div>
           <h4>Empowerment</h4>
           <p>We enable communities to become self-reliant and confident, providing tools and knowledge for lasting independence.</p>
         </div>
