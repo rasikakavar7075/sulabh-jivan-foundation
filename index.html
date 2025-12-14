@@ -1,8 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4WH37RTLS"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F4WH37RTLS');
+  </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rasika Kavar">
     <title>Sulabh Jivan Foundation</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -94,7 +104,7 @@
             Committed to creating a positive impact through education, health,
             and economic empowerment for marginalized communities.
           </p>
-          <a href="activities.html" class="cta-button">Explore Our Work</a>
+          <a href="activities.html" class="cta-button" data-i18n="explore_work">Explore Our Work</a>
         </div>
 
         <div class="hero-slider-column">
@@ -158,10 +168,10 @@
             </p>
 
             <div class="skills">
-              <a href="activities.html?category=education" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_2">Education</span></a>
-              <a href="activities.html?category=women" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_3">Women Empowerment</span></a>
-              <a href="activities.html?category=health" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_4">Health & Nutrition</span></a>
-              <a href="activities.html?category=youth" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_5">Youth</span></a>
+              <a href="activities.html?category=education" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_1">Education</span></a>
+              <a href="activities.html?category=women" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_2">Women Empowerment</span></a>
+              <a href="activities.html?category=health" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_3">Health & Nutrition</span></a>
+              <a href="activities.html?category=youth" style="text-decoration: none;"><span class="skill-tag" data-i18n="skill_4">Youth</span></a>
               <hr>
               <a
                 href="about.html"
@@ -366,7 +376,7 @@
                 <div class="detail-item">
                   <i class="fas fa-map-marker-alt"></i>
                   <p>
-                    <strong>Address: </strong>At/PostVarude, Behind Union Bank
+                    <strong>Address: </strong>At/Post Varude, Behind Union Bank
                     of India, Taluka Khed, District Pune, Pincode : 410 505
                   </p>
                 </div>
@@ -595,7 +605,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       // Simple Intersection Observer to trigger the animations
-      const observer = new IntersectionObserver(
+      const observers = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -609,7 +619,7 @@
       document
         .querySelectorAll(".fade-in, .slide-in-left, .slide-in-right")
         .forEach((el) => {
-          observer.observe(el);
+          observers.observe(el);
         });
     </script>
   </body>

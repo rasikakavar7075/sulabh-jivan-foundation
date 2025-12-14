@@ -22,16 +22,6 @@ const translations = {
         
         "view_more": "View More About Us",
 
-        // Activities Section
-        "activities_title": "Our Social Activities",
-        "activity_1_title": "Scholarship for Girls with Single Parents",
-        "activity_1_desc": "The organization has provided scholarships to girls from single-parent families, widows, or orphans, with financial assistance for school fees, uniforms, and books.",
-        "activity_2_title": "Distribution of Bicycles to Girls",
-        "activity_2_desc": "With the help of Prof. Vidula Madam, bicycles were distributed to girls at Jawahar Vidyalaya Chas to help them overcome the difficulty of traveling to school.",
-        "activity_3_title": "Educational Material Distribution Program",
-        "activity_3_desc": "The foundation distributed notebooks, books, and compass boxes to students living in a hostel at Shri. M.Y. Holkar Vidyalaya, Wafgaon.",
-        "view_all_activities": "View All Activities",
-
         // Donate Section
         "support_title": "Support Our Cause",
         "donation_heading": "Your Contribution Makes a Difference",
@@ -89,17 +79,7 @@ const translations = {
         "about_heading": "वर्ष 2018 से ग्रामीण युवाओं, महिलाओं और बालिकाओं के सशक्तीकरण हेतु समर्पित", // Improved: Used 'बालिकाओं' (girls) and 'हेतु समर्पित' (dedicated for)
         "about_description": "एक छोटा सा कदम भी किसी के जीवन को बदल सकता है। वर्ष 2018 से, सुलभ जीवन फाउंडेशन ग्रामीण युवाओं, महिलाओं और बालिकाओं को सशक्त बनाने की दिशा में कार्यरत है। हमारा मानना है कि हर व्यक्ति आत्मनिर्भर बन सकता है और अपनी पूर्ण क्षमता को प्राप्त कर सकता है। एक-एक अवसर प्रदान करके, एक प्रगतिशील समाज के निर्माण में हमारा साथ दें।", // Improved: More fluent and formal Hindi
        
-        "view_more": "हमारे बारे में अधिक जानें", // Improved: Used 'जानें' (know)
-
-        // Activities Section
-        "activities_title": "हमारी सामाजिक गतिविधियाँ",
-        "activity_1_title": "एकल अभिभावक वाली बालिकाओं के लिए छात्रवृत्ति", // Improved: Used 'बालिकाओं' and 'एकल अभिभावक'
-        "activity_1_desc": "संगठन ने एकल-अभिभावक परिवारों, विधवाओं या अनाथ लड़कियों को छात्रवृत्ति प्रदान की है, जिसमें स्कूल शुल्क, वर्दी और पुस्तकों के लिए वित्तीय सहायता शामिल है।",
-        "activity_2_title": "छात्राओं को साइकिल वितरण", // Improved: Used 'छात्राओं' (female students)
-        "activity_2_desc": "प्रो. विदुला मैडम की सहायता से, जवाहर विद्यालय चास की छात्राओं को स्कूल आने-जाने की कठिनाई को दूर करने के लिए साइकिलें वितरित की गईं।", // Improved: Used 'सहायता' (help)
-        "activity_3_title": "शैक्षणिक सामग्री वितरण कार्यक्रम",
-        "activity_3_desc": "फाउंडेशन ने श्री एम.वाई. होलकर विद्यालय, वाफगांव के छात्रावास में रहने वाले छात्रों को नोटबुक, किताबें और कम्पास बॉक्स वितरित किए।",
-        "view_all_activities": "सभी गतिविधियाँ देखें",
+        "view_more": "हमारे बारे में अधिक जानें", // Improved: Used 'जानें' (know),
 
         // Donate Section
         "support_title": "हमारे उद्देश्य का समर्थन करें", // Used 'उद्देश्य' (cause/aim)
@@ -157,17 +137,7 @@ const translations = {
         "about_title": "सुलभ जीवन फाउंडेशन बद्दल",
         "about_heading": "२०१८ पासून ग्रामीण युवक, महिला आणि मुलींना सक्षम बनवण्यासाठी समर्पित", // Improved: Used 'बनवण्यासाठी' (to make)
         "about_description": "एक लहान पाऊल जीवन बदलू शकते. २०१८ पासून, सुलभ जीवन फाउंडेशन ग्रामीण युवक, महिला आणि मुलींना सक्षम करण्यासाठी काम करत आहे. प्रत्येक व्यक्ती स्वावलंबी होऊन आपली पूर्ण क्षमता साध्य करू शकेल, अशा जगावर आमचा विश्वास आहे. एका वेळी एक संधी देऊन, प्रगतीशील समाज निर्माण करण्याच्या आमच्या कार्यात सामील व्हा.", // Improved: More fluent and natural Marathi
-        "view_more": "आमच्याबद्दल अधिक जाणून घ्या", // Improved: Used 'जाणून घ्या' (know more)
-
-        // Activities Section
-        "activities_title": "आमचे सामाजिक उपक्रम", // Used 'उपक्रम'
-        "activity_1_title": "एकल पालक असलेल्या मुलींसाठी शिष्यवृत्ती",
-        "activity_1_desc": "संस्थेने एकल-पालक कुटुंबे, विधवा किंवा अनाथ मुलींना शिष्यवृत्ती दिली आहे, ज्यात शाळा शुल्क, गणवेश आणि पुस्तकांसाठी आर्थिक मदत समाविष्ट आहे.", // Improved: Used 'मदत' (help) instead of 'सहाय्य'
-        "activity_2_title": "मुलींना सायकल वाटप", // Improved: Used 'वाटप' (distribution)
-        "activity_2_desc": "प्रा. विदुला मॅडम यांच्या मदतीने, जवाहर विद्यालय चास येथील मुलींना शाळेत ये-जा करण्याची अडचण दूर करण्यासाठी सायकलींचे वाटप करण्यात आले.", // Improved: Used 'ये-जा करण्याची अडचण' (difficulty of traveling/commuting)
-        "activity_3_title": "शैक्षणिक साहित्य वितरण कार्यक्रम", // Used 'साहित्य' (material)
-        "activity_3_desc": "फाउंडेशनने श्री. एम.वाय. होलकर विद्यालय, वाफगाव येथील वसतिगृहात राहणाऱ्या विद्यार्थ्यांना वह्या, पुस्तके आणि कंपास बॉक्स वितरित केले.", // Improved: Used 'वसतिगृह' (hostel) and 'वह्या' (notebooks)
-        "view_all_activities": "सर्व उपक्रम पहा", // Used 'उपक्रम'
+        "view_more": "आमच्याबद्दल अधिक जाणून घ्या", // Improved: Used 'जाणून घ्या' (know more),
 
         // Donate Section
         "support_title": "आमच्या ध्येयाला पाठिंबा द्या", // Improved: Used 'ध्येय' (cause/aim) and 'पाठिंबा द्या' (give support)
